@@ -169,10 +169,11 @@ public class GUIController<T>
 
     /**
      * Stops any existing timer currently carrying out steps.
+     * Phillip Sturtevant Note: keep tool tips hidden to prevent visual artifacts
      */
     public void stop()
     {
-        display.setToolTipsEnabled(true);
+    	display.setToolTipsEnabled(false); // hide tool tips while stopped
         timer.stop();
         running = false;
     }

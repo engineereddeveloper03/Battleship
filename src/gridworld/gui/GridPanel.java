@@ -87,7 +87,8 @@ public class GridPanel extends JPanel implements Scrollable,
     {
         displayMap = map;
         resources = res;
-        setToolTipsEnabled(true);
+        // Phillip Sturtevant: Commented out to prevent visual artifacts
+        //setToolTipsEnabled(true);
     }
 
     /**
@@ -110,7 +111,9 @@ public class GridPanel extends JPanel implements Scrollable,
         drawWatermark(g2);
         drawGridlines(g2);
         drawOccupants(g2);
-        drawCurrentLocation(g2);
+        
+        // Phillip Sturtevant Note: commented out to create cleaner look on battleship map
+        //drawCurrentLocation(g2);
     }
 
     /**
@@ -200,6 +203,7 @@ public class GridPanel extends JPanel implements Scrollable,
 
     /**
      * Draws a square that marks the current location.
+     * Phillip Sturtevant Note: Commented out to keep clean look on Battleship board.
      * @param g2 the graphics context
      */
     private void drawCurrentLocation(Graphics2D g2)
